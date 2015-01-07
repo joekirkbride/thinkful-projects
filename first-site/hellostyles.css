@@ -1,0 +1,13 @@
+/*h1 selector*/
+h1 {
+/*property: value;*/
+color: blue;
+background-color: black;
+text-align: center;
+}
+
+p {
+background-color: blue;
+color: white;
+text-align; center;
+}
