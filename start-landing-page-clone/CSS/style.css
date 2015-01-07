@@ -48,3 +48,29 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+/**************
+  joe kirkbride
+*************/
+
+/*****
+Navigation Bar
+*****/
+.navlogo {
+	width: 30px;
+	margin-top: 1em;
+	margin-left: 2em;
+}
+.navlinks {
+	float: right;
+	vertical-align: baseline;
+	margin-top: 2em;
+}
+
+.navlinks a {
+	color: lightslategray;
+	text-decoration: none;
+	padding-right: 1em;
+	font-size: 1.1em;
+	font-family: sans-serif;
+}
