@@ -1,3 +1,13 @@
+/* Paul Irish Box-Sizing: Border-Box reset - apply a natural box layout model to all elements, but allowing components to change http://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
+html {
+ /* box-sizing: border-box;*/
+}
+body{
+	margin: 0px 0px 0px 0px;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
 /************
    RESET CSS
    http://meyerweb.com/eric/tools/css/reset/ 
@@ -56,19 +66,50 @@ table {
 /*****
 Navigation Bar
 *****/
-
+body {
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+}
 .topnav {
 	background-color: #fff;
-}
-
-.topnav .content {
-	width: 60.625rem;
-	height: 4.375rem;
-	margin: 0 auto;
-}
-.logo {
-	margin-left: : 14px;
 	height: 70px;
+	position: fixed;
+	width: 100%;
+	z-index: 9999;
+	margin-top: -50px;
+	/*width: 970px;*/
+}
+.content {
+	padding: 0 15px;
+	/*margin: 0 auto;*/
+	/*width: 970px;*/
+}
+.topnav .logo {
+	/*margin-left: 14px;*/
+	height: 70px;
+}
+.topnav .links {
+	float: right;
+	margin-top: 1.5em;
+}
+.topnav .links li {
+	font-family: 'Roboto', sans-serif; 
+	font-size: 16px; 
+	color: #838994; 
+	letter-spacing: 0.03em;
+	padding: 0 1em;
+	display: inline-block;
+	/*default setting in Chrome*/
+	-webkit-font-smoothing: antialised;
+}
+.topnav .links .active{
+	color: #4C5058;
+	font-weight: 600;
+}
+.topnav .links li:hover {
+	transition: color 0.5s ease;
+	cursor: pointer;
+	color: blue;
 }
 /*
 .navlogo {
@@ -90,3 +131,66 @@ Navigation Bar
 	font-family: sans-serif;
 }
 */
+
+/************
+main section
+********/
+.mainsection {
+	color: white;
+	font-family: 'Roboto', sans-serif;
+	text-align: center;
+}
+.mainsection .content {
+	height: 45.938rem;
+	background-image: url("../images/first-background.jpg");
+	background-size: cover;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+}
+.mainsection .content h1 {
+	padding: 8px 0;
+	font-size: 32px;
+	position: relative;
+	margin-top: 50px;
+}
+.mainsection .content h3 {
+	padding: 8px 0;
+	font-size: 16px;
+}
+.mainsection .content .btn {
+/*	padding: 8px 0;
+	height: 30px;
+	min-width: 100px;*/
+	color: white;
+	background-color: orange;
+}
+.btn {
+    text-shadow: none;
+    border-style: none;
+    border-radius: 4px;
+    padding: 16px 26px;
+    line-height: 1.33;	
+}
+/****
+icon section
+*****/
+.iconsection {
+	color: gray;
+	font-family: 'Roboto', sans-serif;
+	text-align: center;
+}
+.iconsection .content .icon{
+	/*width: 30%;*/
+	padding: 0 2em;
+    display: inline-block;
+    /* styles to assist with debugging */
+    /*border: 1px solid black;*/
+    box-sizing: border-box;
+    height: 8em;
+}
+.iconsection .content h2 {
+	padding: 8px 0;
+	font-size: 24px;
+	position: relative;
+	margin-top: 10px;
+}
