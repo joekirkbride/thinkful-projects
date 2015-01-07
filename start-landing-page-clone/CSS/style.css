@@ -56,6 +56,21 @@ table {
 /*****
 Navigation Bar
 *****/
+
+.topnav {
+	background-color: #fff;
+}
+
+.topnav .content {
+	width: 60.625rem;
+	height: 4.375rem;
+	margin: 0 auto;
+}
+.logo {
+	margin-left: : 14px;
+	height: 70px;
+}
+/*
 .navlogo {
 	width: 30px;
 	margin-top: 1em;
@@ -74,3 +89,4 @@ Navigation Bar
 	font-size: 1.1em;
 	font-family: sans-serif;
 }
+*/
