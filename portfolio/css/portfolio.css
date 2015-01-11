@@ -38,10 +38,6 @@ header {
 	text-shadow: 1px 1px 5px rgba(0,0,0,0.2);
 }
 .maintitle h1 {
-	/*text-align: center;*/
-/*	margin-left: auto;
-    margin-right: auto;
-    width: 25rem;*/
 	font-size: 2.5rem;
 	text-transform: uppercase;
 	font-weight: bold;
@@ -223,7 +219,7 @@ MEDIA QUERIES
 		display: none;
 	}
 	header .navlist li {
-		padding-right: 0.4rem;
+		padding-right: 0.3rem;
 	}
 	footer {
 		padding: 2rem 0;
