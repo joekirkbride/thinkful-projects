@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Shopping Cart Mock</title>
+	<link href='http://fonts.googleapis.com/css?family=Arimo|Montserrat|Roboto' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="css/mockup.css">
+</head>
+<body>
+	<section class="controls">
+		<div>
+			<h1>Shopping Cart</h1>
+			<h2>Total $10</h2>
+			<input class="inputbox" type="text" class="additems" placeholder="add item, press enter">
+		</div>
+	</section>
+	<section class="activecart" style="border-top: 0.1em solid blue;">
+		<ul>
+			<li>
+			<div class="li-item">
+				<div class="box">
+					<input type="checkbox" checked>
+				</div>
+				<div class="activeitem">
+					<span class="item">bicycle</span>
+					<span class="price">$10</span>
+				</div>
+				<div class="btn-removeitem">
+					<button>-</button>
+				</div>
+			</div>
+			</li>
+			<li>
+			<div class="li-item">
+				<div class="box">
+					<input type="checkbox">
+				</div>
+				<div class="disableitem">
+					<span class="item">helmet</span>
+					<span class="price">$1</span>
+				</div>
+				<div class="btn-removeitem">
+					<button>-</button>
+				</div>
+			</div>
+			</li>
+		</ul>
+	</section>
+	<section class="inactivecart" style="border-top: 0.1em solid blue;">
+		<h2>removed items</h2>
+		<ul>
+			<li>
+			<div class="li-item">
+				<div class="box hidden">
+					<input type="checkbox">
+				</div>
+				<div class="removeitem">
+					<span class="item">water bottle</span>
+					<span class="price">$2</span>
+				</div>
+				<div class="btn-additem">
+					<button>+</button>
+				</div>
+			</div>
+			</li>
+		</ul>
+	</section>
+</body>
+</html>

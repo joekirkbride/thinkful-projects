@@ -1,0 +1,84 @@
+<mockup version="1.0" skin="wireframe" fontFace="Balsamiq Sans" measuredW="984" measuredH="616" mockupW="574" mockupH="571">
+  <controls>
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="410" y="45" w="574" h="571" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Shopping%20Cart%0Ahttp%3A//www.cart.com</text>
+      </controlProperties>
+    </control>
+    <control controlID="1" controlTypeID="com.balsamiq.mockups::TextInput" x="614" y="240" w="-1" h="-1" measuredW="146" measuredH="24" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>15110456</color>
+        <text>type%20item%20and%20hit%20enter</text>
+      </controlProperties>
+    </control>
+    <control controlID="3" controlTypeID="com.balsamiq.mockups::HRule" x="562" y="267" w="236" h="-1" measuredW="100" measuredH="10" zOrder="2" locked="false" isInGroup="-1"/>
+    <control controlID="4" controlTypeID="com.balsamiq.mockups::TextInput" x="614" y="285" w="133" h="-1" measuredW="115" measuredH="24" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <borderColor>0</borderColor>
+        <color>16767334</color>
+        <state>disabled</state>
+        <text>bicycle%20%20%20%20%20%20%20%20%20%20%20%2410</text>
+      </controlProperties>
+    </control>
+    <control controlID="7" controlTypeID="com.balsamiq.mockups::Button" x="747" y="285" w="-1" h="-1" measuredW="26" measuredH="24" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>-</text>
+      </controlProperties>
+    </control>
+    <control controlID="9" controlTypeID="__group__" x="626" y="169" w="127" h="26" measuredW="127" measuredH="26" zOrder="5" locked="false" isInGroup="-1">
+      <groupChildrenDescriptors>
+        <control controlID="0" controlTypeID="com.balsamiq.mockups::Label" x="0" y="0" w="127" h="-1" measuredW="119" measuredH="26" zOrder="0" locked="false" isInGroup="9">
+          <controlProperties>
+            <size>18</size>
+            <text>Shopping%20Cart</text>
+          </controlProperties>
+        </control>
+      </groupChildrenDescriptors>
+    </control>
+    <control controlID="10" controlTypeID="com.balsamiq.mockups::Label" x="640" y="204" w="81" h="-1" measuredW="69" measuredH="21" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>2101837</color>
+        <text>Total%20%20%20%20%20%20%245</text>
+        <textOrientation>right</textOrientation>
+      </controlProperties>
+    </control>
+    <control controlID="12" controlTypeID="com.balsamiq.mockups::TextInput" x="614" y="327" w="133" h="-1" measuredW="109" measuredH="24" zOrder="7" locked="false" isInGroup="-1">
+      <controlProperties>
+        <backgroundAlpha>1</backgroundAlpha>
+        <borderColor>0</borderColor>
+        <color>6989903</color>
+        <state>up</state>
+        <text>helmet%20%20%20%20%20%20%20%20%20%20%20%245</text>
+      </controlProperties>
+    </control>
+    <control controlID="13" controlTypeID="com.balsamiq.mockups::Button" x="747" y="327" w="-1" h="-1" measuredW="26" measuredH="24" zOrder="8" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>-</text>
+      </controlProperties>
+    </control>
+    <control controlID="14" controlTypeID="com.balsamiq.mockups::CheckBoxGroup" x="593" y="285" w="-1" h="-1" measuredW="20" measuredH="59" zOrder="9" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>%5B%20%5D%0A%20%0A%5Bx%5D</text>
+      </controlProperties>
+    </control>
+    <control controlID="16" controlTypeID="com.balsamiq.mockups::HRule" x="573" y="369" w="233" h="-1" measuredW="100" measuredH="10" zOrder="10" locked="false" isInGroup="-1"/>
+    <control controlID="17" controlTypeID="com.balsamiq.mockups::Label" x="646" y="379" w="90" h="-1" measuredW="83" measuredH="21" zOrder="11" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Deleted%20items</text>
+      </controlProperties>
+    </control>
+    <control controlID="18" controlTypeID="com.balsamiq.mockups::TextInput" x="614" y="400" w="133" h="-1" measuredW="118" measuredH="24" zOrder="12" locked="false" isInGroup="-1">
+      <controlProperties>
+        <borderColor>0</borderColor>
+        <color>15374745</color>
+        <state>disabled</state>
+        <text>water%20bottle%20%20%20%20%20%20%241</text>
+      </controlProperties>
+    </control>
+    <control controlID="19" controlTypeID="com.balsamiq.mockups::Button" x="747" y="400" w="-1" h="-1" measuredW="30" measuredH="24" zOrder="13" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>+</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>
