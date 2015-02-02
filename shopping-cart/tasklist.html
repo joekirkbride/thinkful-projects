@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>task list</title>
+	<link href='http://fonts.googleapis.com/css?family=Arimo|Montserrat|Roboto' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="css/tasklist.css">
+</head>
+<body>
+	<header>
+		<h1>Task List</h1>
+	</header>
+	<section class="additem-section">
+		<input class="inputbox" type="text" placeholder="add item, then press enter">
+	</section>
+	<section class="activelist-section" style="">
+		<h1>To Do List</h1>
+		<ul id="activelist">
+			<li class="empty"><div class="listitem"><div class="activeitem"><input class="box" type="checkbox"><span class="item">placeholder</span><button class="itembtn">-</button></div></div></li>
+		</ul>
+	</section>
+	<section class="deleteditem-section">
+		<h1>Deleted Tasks</h1>
+		<ul id="deletedlist">
+			<li class="empty"><div class="listitem"><div class="deleteditem"><input class="box hidden" type="checkbox"><span class="item">placeholder</span><button class="itembtn">-</button></div></div></li>
+		</ul>
+	</section>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script>if (!window.jQuery) { document.write('<script src="script/jquery.min.js"><\/script>'); }
+</script>
+	<script type="text/javascript" src="script/tasklist.js"></script>
+</body>
+</html>
