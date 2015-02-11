@@ -42,6 +42,7 @@ $(document).ready(function(){
 
   	function newGame(){
   		$("ul#guessList li").remove();
+      $('#userGuess').val('');
   		isAnsweredCorrect = false;
   		var countFeedback = setFeedbackText('#count');
   		countFeedback(guessCount=0);
