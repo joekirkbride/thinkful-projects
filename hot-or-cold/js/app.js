@@ -41,6 +41,7 @@ $(document).ready(function(){
   	});
 
   	function newGame(){
+      previousDelta = null;
   		$("ul#guessList li").remove();
       $('#userGuess').val('');
   		isAnsweredCorrect = false;
