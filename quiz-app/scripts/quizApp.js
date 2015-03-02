@@ -2,6 +2,7 @@
 var quizApp = angular.module("quizApp", []);
 var correctAnswer = 0;
 var userAnswer = -1;
+var currentQuestion = -1;
 
 quizApp.controller("QuizCtrl", function ($scope, $http) {
 	$http.get("questionlist.json").success(function (data) {
