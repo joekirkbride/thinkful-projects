@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="quizApp">
 <head>
 	<meta charset="UTF-8">
 	<title>Quiz App</title>
@@ -10,7 +10,7 @@
 	<link href='//fonts.googleapis.com/css?family=Overlock|Neucha' rel='stylesheet' type='text/css'>
 	<link href="css/quiz.css" rel="stylesheet"> -->
 </head>
-<body>
+<body ng-controller="QuizCtrl">
 	<header>
 		<nav class="navbar">
 			<ul class="navlist">
@@ -20,33 +20,63 @@
 			</ul>
 		</nav>
 		<h1>
-			Muzq Qz
+			{{quiz.quiztitle}}
 		</h1>
 	</header>
 	<section>
 		<div id="question-panel" class="panel">
 			<div class="panel">
-				<div class="question">
+				<div id="question" class="question">
 					<h3>
-						Is this question a placeholder?
+						{{quiz.questions[0].question}}
 					</h3>
 				</div>
-				<div class="radio">
-					<input type="radio" name="answers" value="a"/>
-					1) AAAA
+				<div id="answers">
+					<div class="radio">
+						<input type="radio" name="answers" value="a"/>
+						a
+					</div>
+					<div class="radio">
+						<input type="radio" name="answers" value="b"/>
+						b
+					</div>
+					<div class="radio">
+						<input type="radio" name="answers" value="c"/>
+						c
+					</div>
+					<div class="radio">
+						<input type="radio" name="answers" value="d"/>
+						d
+					</div>	
 				</div>
-				<div class="radio">
-					<input type="radio" name="answers" value="b"/>
-					2) BBBB
-				</div>
-				<div class="radio">
-					<input type="radio" name="answers" value="c"/>
-					3) CCCC
-				</div>
-				<div class="radio">
-					<input type="radio" name="answers" value="d"/>
-					4) DDDD
-				</div>			
+<!-- 				<div>
+				<ul id="answers">
+					<li>
+						<div class="radio">
+							<input type="radio" name="answers" value="a"/>
+							1) a
+						</div>						
+					</li>
+					<li>
+						<div class="radio">
+							<input type="radio" name="answers" value="b"/>
+							2) b
+						</div>						
+					</li>
+					<li>
+						<div class="radio">
+							<input type="radio" name="answers" value="c"/>
+							3) c
+						</div>
+					</li>
+					<li>
+						<div class="radio">
+							<input type="radio" name="answers" value="d"/>
+							4) d
+						</div>
+					</li>
+				</ul>
+				</div> -->	
 			</div>
 			<input type="button" class="btn btn-success btn-block" value="submit answer" />
 		</div>
@@ -55,5 +85,9 @@
 	<link href="css/bootstrap-theme.min.css" rel="stylesheet">
 	<!-- <link href='//fonts.googleapis.com/css?family=Overlock|Neucha' rel='stylesheet' type='text/css'> -->
 	<link href="css/quiz.css" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.12/angular.min.js"></script>
+	<!-- <script src="scripts/angular.min.js"></script> -->
+	<script src="scripts/quizApp.js"></script>
 </body>
 </html>

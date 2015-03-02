@@ -1,0 +1,9 @@
+{
+"quiztitle" : "Muzq Qz",
+"questions" : [{"question" : "Which musician is also known as Satchmo?",
+		"answers" : [{"answer" : "Louis Armstrong", "correct" : true},
+			{"answer" : "Count Basie", "correct" : false},
+			{"answer" : "Dizzie Gillepsie", "correct" : false},
+			{"answer" : "Duke Ellington", "correct" : false}]
+		}]
+}
