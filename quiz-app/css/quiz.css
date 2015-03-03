@@ -68,6 +68,9 @@ section {
 	margin-bottom: 5px;
 	min-height: 180px;
 }
+#question-area {
+	/* place holder */	
+}
 #answers {
 	display: inline-block;
 	width: 50%;
@@ -78,14 +81,22 @@ section {
 #answers .radio {
 	padding-left: 1.8rem;
 }
-#scoreTitle {
-	display : none;
-	border: 0;
+#score-area,
+#help-area {
+	display: none;
 }
-#results {
-	display : none;
+#scoretitle,
+#helptitle {
+	/*display : none;*/
+	/*border: 0;*/
+	min-width: 355px;
+}
+#results,
+#helpinstructions {
+	/*display : none;*/
 	color: #FFFF00;
 	width: 100%;
+	margin-top: 8px;
 }
 #question-panel .btn {
 	font-size: 1.5rem;

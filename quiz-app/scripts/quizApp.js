@@ -1,11 +1,17 @@
 
-var quizApp = angular.module("quizApp", []);
+// global variables
 var correctAnswer = 0;
 var userAnswer = -1;
 var currentQuestion = 0;
 var userScores = new Array();
+var showQuizFlag = true;
 
+/***************ANGULAR QUIZ************************/
+var quizApp = angular.module("quizApp", []);
+
+// quiz controller
 quizApp.controller("QuizCtrl", function ($scope, $http) {
+	// AJAX call to load quiz
 	$http.get("questionlist.json").success(function (data) {
 		$scope.userChoice = -1;
 		$scope.quiz = data;
@@ -15,42 +21,102 @@ quizApp.controller("QuizCtrl", function ($scope, $http) {
 		alert("failed to load quiz");
 		console.log("failed to load quiz");
 	});
-	$scope.getUserAnswer = function() {
-		//clog($scope.userChoice);
+
+	/**************EVENT LISTENERS**************/
+	$scope.SubmitAnswer = SaveAnswerPrintNextQuestion;
+	$scope.Restart = NewGame;
+	$scope.Scores = ShowScores;
+	$scope.Help = ShowHelp;
+
+	/*************FUNCTIONS*********************/
+	// store user answer and show next question
+	function SaveAnswerPrintNextQuestion() {
+		clog("button press: " + currentQuestion);
 		var delta = parseInt($scope.userChoice) - parseInt(correctAnswer);
 		userScores[currentQuestion-1] = (delta==0)? 1 : 0;
-		//clog("curr question : "+currentQuestion+" correct : "+correctAnswer+" user choice : "+$scope.userChoice);
 		if (currentQuestion < $scope.quiz.questions.length) {
 			displayQuestion($scope.quiz.questions[currentQuestion]);
 		}
 		else
 		{
-			// end of game
+			// end of game show scores
+			ShowScores();
+		}
+		$scope.userChoice = -1;
+	};
+
+	// display current user score
+	function ShowScores () {
+		if (showQuizFlag) {
+			// show the score
+			$scope.SubmitAnswer = null;
 			$scope.usertotal = 0;
 			angular.forEach(userScores, function(score) {
 				$scope.usertotal += parseInt(score);
 			});
-			$scope.maxtotal = currentQuestion;
-			changeElementAttribute('#question', 'display', 'none');
-			changeElementAttribute('#answers', 'display', 'none');
-			changeElementAttribute('#scoreTitle', 'display', 'block');
-			changeElementAttribute('#results', 'display', 'block');
+			$scope.maxtotal = $scope.quiz.questions.length;
+			changeElementAttribute('#question-area', 'display', 'none');
+			changeElementAttribute('#score-area', 'display', 'block');
+			changeElementAttribute('#help-area', 'display', 'none');
+			showQuizFlag = false;
 		}
-		//clog(userScores);
-		$scope.userChoice = -1;
+		else {
+			// show the current question
+			$scope.SubmitAnswer = SaveAnswerPrintNextQuestion;
+			displayQuestionArea();
+			showQuizFlag = true;
+		}
 	};
-	$scope.Reset = NewGame;
+
+	// quiz instructions
+	function ShowHelp () {
+		if (showQuizFlag) {
+			// show help menu
+			$scope.SubmitAnswer = null;
+			changeElementAttribute('#question-area', 'display', 'none');
+			changeElementAttribute('#score-area', 'display', 'none');
+			changeElementAttribute('#help-area', 'display', 'block');
+			showQuizFlag = false;
+		}
+		else {
+			// show the current question
+			$scope.SubmitAnswer = SaveAnswerPrintNextQuestion;
+			displayQuestionArea();
+			showQuizFlag = true;
+		}
+	};
+
+	// start a new game
+	function NewGame () {
+		// reset flags and restore default settings
+		displayQuestionArea();
+		correctAnswer = 0;
+		userAnswer = -1;
+		currentQuestion = 0;
+		userScores = new Array();
+		showQuizFlag = true;
+		// randomize quiz data
+		$scope.userChoice = -1;
+		$scope.quiz.questions = shuffleArray($scope.quiz.questions);
+		displayQuestion($scope.quiz.questions[currentQuestion]);		
+	};
 });
 
-function NewGame () {
+/************HELPER FUNCTIONS****************************/
 
-	//alert("reset game");
-};
+// reset display attributes for a new game
+function displayQuestionArea() {
+	changeElementAttribute('#question-area', 'display', 'block');
+	changeElementAttribute('#score-area', 'display', 'none');
+	changeElementAttribute('#help-area', 'display', 'none');
+}
+
 // change attribute value
 function changeElementAttribute(elemID, attrName, attrVal) {
 	var elem = angular.element(document.querySelector(elemID));
 	elem.css(attrName,attrVal);
 };
+
 // display question and answers in the markup
 function displayQuestion(questionToDisplay) {
 	// set the question
@@ -61,9 +127,6 @@ function displayQuestion(questionToDisplay) {
 
 	// shuffle questions
 	var answers = shuffleArray(questionToDisplay.answers);
-	// get and empty the answers element on the DOM
-	// var list = angular.element(document.querySelector('#answers'));
-	// list.empty();
 
 	var count = 0;
 	// add each answer to markup
@@ -72,8 +135,6 @@ function displayQuestion(questionToDisplay) {
 		var divAnswer = angular.element(document.querySelector(elementID));
 		divAnswer.empty();
 		divAnswer.append(answer.answer);
-		// var a = '<div class="radio"><input type="radio" ng-model="userChoice" name="answers" value="'
-		// 	+ count + '"/>' + answer.answer	+ '</div>';
 		if (answer.correct === true) {
 			correctAnswer = count;
 		}
