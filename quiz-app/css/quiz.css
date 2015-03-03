@@ -66,18 +66,26 @@ section {
 	border-color: black;
 	border-radius: 15px 15px 5px 5px;
 	margin-bottom: 5px;
+	min-height: 180px;
 }
 #answers {
 	display: inline-block;
-	/*list-style: none;*/
 	width: 50%;
 	margin-left: auto;
 	margin-right: auto;
-	/*padding-left: 0px;*/
 	text-align: left;
 }
 #answers .radio {
 	padding-left: 1.8rem;
+}
+#scoreTitle {
+	display : none;
+	border: 0;
+}
+#results {
+	display : none;
+	color: #FFFF00;
+	width: 100%;
 }
 #question-panel .btn {
 	font-size: 1.5rem;

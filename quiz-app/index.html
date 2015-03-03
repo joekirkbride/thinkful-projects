@@ -3,18 +3,12 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Quiz App</title>
-<!-- 	<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
-	<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css" rel="stylesheet"> -->
-<!-- 	<link href="css/bootstrap.min.css" rel="stylesheet">
-	<link href="css/bootstrap-theme.min.css" rel="stylesheet">
-	<link href='//fonts.googleapis.com/css?family=Overlock|Neucha' rel='stylesheet' type='text/css'>
-	<link href="css/quiz.css" rel="stylesheet"> -->
 </head>
 <body ng-controller="QuizCtrl">
 	<header>
 		<nav class="navbar">
 			<ul class="navlist">
-				<li><a href="#">Reset</a></li>
+				<li><a href="#" ng-click="Reset()">Reset</a></li>
 				<li><a href="#score">Score</a></li>
 				<li><a href="#help">Help</a></li>
 			</ul>
@@ -24,65 +18,42 @@
 		</h1>
 	</header>
 	<section>
+		<form>
 		<div id="question-panel" class="panel">
 			<div class="panel">
 				<div id="question" class="question">
 					<h3>
-						{{quiz.questions[0].question}}
+						Welcome to quiz app?
 					</h3>
 				</div>
-				<div id="answers">
+				<div id="answers" class="form-group">
 					<div class="radio">
-						<input type="radio" name="answers" value="a"/>
-						a
+						<input type="radio" ng-model="userChoice" name="answers" value="0"/>
+						<div id="a0">a</div>
 					</div>
 					<div class="radio">
-						<input type="radio" name="answers" value="b"/>
-						b
+						<input type="radio" ng-model="userChoice" name="answers" value="1"/>
+						<div id="a1">b</div>
 					</div>
 					<div class="radio">
-						<input type="radio" name="answers" value="c"/>
-						c
+						<input type="radio" ng-model="userChoice" name="answers" value="2"/>
+						<div id="a2">c</div>
 					</div>
 					<div class="radio">
-						<input type="radio" name="answers" value="d"/>
-						d
-					</div>	
+						<input type="radio" ng-model="userChoice" name="answers" value="3"/>
+						<div id="a3">d</div>
+					</div>
 				</div>
-<!-- 				<div>
-				<ul id="answers">
-					<li>
-						<div class="radio">
-							<input type="radio" name="answers" value="a"/>
-							1) a
-						</div>						
-					</li>
-					<li>
-						<div class="radio">
-							<input type="radio" name="answers" value="b"/>
-							2) b
-						</div>						
-					</li>
-					<li>
-						<div class="radio">
-							<input type="radio" name="answers" value="c"/>
-							3) c
-						</div>
-					</li>
-					<li>
-						<div class="radio">
-							<input type="radio" name="answers" value="d"/>
-							4) d
-						</div>
-					</li>
-				</ul>
-				</div> -->	
+				<div id="scoreTitle" class="question"><h3>Your score is:</h3></div>
+				<div id="results">{{usertotal}} out of {{maxtotal}}</div>
 			</div>
-			<input type="button" class="btn btn-success btn-block" value="submit answer" />
+			<input ng-click="getUserAnswer()" type="button" class="btn btn-success btn-block" value="submit answer" />
 		</div>
+		</form>
 	</section>
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/bootstrap-theme.min.css" rel="stylesheet">
+	<!-- <link rel="stylesheet" href="css/font-awesome.min.css"> -->
 	<!-- <link href='//fonts.googleapis.com/css?family=Overlock|Neucha' rel='stylesheet' type='text/css'> -->
 	<link href="css/quiz.css" rel="stylesheet">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
