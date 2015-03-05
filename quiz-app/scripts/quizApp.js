@@ -98,7 +98,9 @@ quizApp.controller("QuizCtrl", function ($scope, $http) {
 		// randomize quiz data
 		$scope.userChoice = -1;
 		$scope.quiz.questions = shuffleArray($scope.quiz.questions);
-		displayQuestion($scope.quiz.questions[currentQuestion]);		
+		displayQuestion($scope.quiz.questions[currentQuestion]);
+		// reset button event
+		$scope.SubmitAnswer = SaveAnswerPrintNextQuestion;
 	};
 });
 

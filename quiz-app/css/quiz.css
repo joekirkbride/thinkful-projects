@@ -6,13 +6,13 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 	font-family: 'Overlock';
 	src: local('Overlock'),
 		url("../fonts/Overlock/Overlock-Regular.ttf") format("opentype"),
-		url(http://fonts.gstatic.com/s/overlock/v5/a3jGAlRXMucJGtDWDaeEmfesZW2xOQ-xsNqO47m55DA.woff2) format('woff2');
+		url(https://fonts.gstatic.com/s/overlock/v5/a3jGAlRXMucJGtDWDaeEmfesZW2xOQ-xsNqO47m55DA.woff2) format('woff2');
 }
 @font-face {
 	font-family: 'Neucha';
 	src: local('Neucha'),
 		url("../fonts/Neucha/Neucha.ttf") format("opentype"),
-		url(http://fonts.gstatic.com/s/neucha/v7/irvP3TB0tsoy_UMHmCQlTw.woff2) format('woff2');
+		url(https://fonts.gstatic.com/s/neucha/v7/irvP3TB0tsoy_UMHmCQlTw.woff2) format('woff2');
 }
 /*****BACKGROUND******/
 body {
